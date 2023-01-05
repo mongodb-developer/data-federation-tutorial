@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 
-client = MongoClient('<YOUR_ATLAS_DATA_LAKE_URI>')
-db = client.get_database("test")
-coll = db.get_collection("orders")
+client = MongoClient('<YOUR_FEDERATED_INSTANCE_URI>')
+db = client.get_database('test')
+coll = db.get_collection('orders')
 
 print("All the docs from S3 + Atlas:")
 docs = coll.find()

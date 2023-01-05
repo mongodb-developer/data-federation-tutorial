@@ -1,13 +1,12 @@
 from datetime import datetime
-
 from pymongo import MongoClient
 
-client = MongoClient('<YOUR-ATLAS-URI>')
-db = client.get_database("test")
-coll = db.get_collection("orders")
+client = MongoClient('<YOUR_ATLAS_URI>')
+db = client.get_database('test')
+coll = db.get_collection('orders')
 
-start_date = datetime(2020, 5, 1, 0, 0, 0)  # May 1st
-end_date = datetime(2020, 6, 1, 0, 0, 0)  # June 1st
+start_date = datetime(2020, 5, 1)  # May 1st
+end_date = datetime(2020, 6, 1)  # June 1st
 query = {
     'created': {
         '$gte': start_date,
