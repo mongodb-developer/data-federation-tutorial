@@ -1,8 +1,8 @@
-# Data Lake Tutorial
+# Data Federation Tutorial
 
-This repo contains some code samples for DevHub blog posts: 
+This repo contains some code samples for a DevCenter blog post: 
 
-- [MongoDB Atlas Data Lake Tutorial: Federated Queries and $out to AWS S3](http://developer.mongodb.com/how-to/atlas-data-lake-federated-queries-out-aws-s3)
+- [MongoDB Atlas Data Federation Tutorial: Federated Queries and $out to AWS S3](http://developer.mongodb.com/how-to/atlas-data-lake-federated-queries-out-aws-s3)
 
 # Requirements
 
@@ -11,8 +11,12 @@ This repo contains some code samples for DevHub blog posts:
 
 # Run
 
-- For `archive.py` and `federated_queries.py` you will need your MongoDB Atlas Data Lake URI.
-- For `remove.py` you will need your MongoDB Atlas URI.
+- For `archive.py` and `federated_queries.py` you will need the URI of your federated instance.
+- For `insert.py` and `remove.py` you will need your MongoDB Atlas URI.
+
+## insert.py
+
+Inserts documents in `test.orders` of the specified MongoDB cluster.
 
 ## archive.py
 
@@ -24,4 +28,4 @@ Removes the documents that we have archived.
 
 ## federated_queries.py
 
-This script checks that we can still access 100% of the data using the Federated Queries.
+This script checks that we can still access 100% of the data using the federated instance.
